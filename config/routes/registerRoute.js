@@ -1,5 +1,5 @@
 const registerRoute = (app, route) => {
-    route(app)
-}
+    route(app);
+};
 
-module.exports = registerRoute
+module.exports = registerRoute;

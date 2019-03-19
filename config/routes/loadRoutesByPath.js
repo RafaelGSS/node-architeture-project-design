@@ -1,8 +1,8 @@
-const path = require('path')
-const filterFiles = require('filter-files')
-const isDir = require('is-directory')
-const { flatten } = require('lodash')
-const isRouteFile = fileName => /((routes)|(route))\.js$/.test(fileName)
+const path = require("path");
+const filterFiles = require("filter-files");
+const isDir = require("is-directory");
+const { flatten } = require("lodash");
+const isRouteFile = fileName => /((routes)|(route))\.js$/.test(fileName);
 
 /**
  * @method getRoutesFilesFromDirname
@@ -12,12 +12,12 @@ const isRouteFile = fileName => /((routes)|(route))\.js$/.test(fileName)
 const getRoutesFilesFromDirname = dirName => {
   return filterFiles.sync(dirName, (fp, dir, files, recurse) => {
     if (isRouteFile(fp)) {
-      return true
+      return true;
     }
 
-    return isDir.sync(path.join(dir, fp))
-  }, true)
-}
+    return isDir.sync(path.join(dir, fp));
+  }, true);
+};
 
 /**
  * @method loadRoutesByPath
@@ -26,9 +26,9 @@ const getRoutesFilesFromDirname = dirName => {
  */
 const loadRoutesByPath = dirName => {
   const routes = getRoutesFilesFromDirname(dirName)
-    .map(require)
+    .map(require);
 
-  return flatten(routes)
-}
+  return flatten(routes);
+};
 
-module.exports = loadRoutesByPath
+module.exports = loadRoutesByPath;
