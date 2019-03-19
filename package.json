@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-api-structure",
+  "version": "1.0.0",
+  "description": "Project structure nodejs",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelGSS/nodejs-api-structure.git"
+  },
+  "author": "Rafael Gonzaga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RafaelGSS/nodejs-api-structure/issues"
+  },
+  "homepage": "https://github.com/RafaelGSS/nodejs-api-structure#readme"
+}
