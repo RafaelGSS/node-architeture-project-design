@@ -1,21 +1,31 @@
-require('dotenv').config()
-
-const express = require('express')
-
-const app = express()
-const bodyParser = require('body-parser')
-
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
-
-const port = process.env.PORT || 4000
-
-const routes = require('./src/routes/routes')
-const middlewares = require('./src/routes/middlewares')
-
-app.use(middlewares)
-app.use(routes)
-
-app.listen(port, function() {
-    console.log(`Server has started on http://localhost:${port}`)
-})
+module.exports = (req, res, next) => {
+    console.log('Chegou aqui2')
+    res.setHeader('Content-Type', 'application/json')
+    res.data = {
+        response: {
+            status: null,
+            message: null,
+            error: null,
+            version: process.env.VERSION || "0.0.0",
+        },
+        data: []
+    }
+    res.setData = (data, message = 'success') => {
+        res.data.data = data
+        res.data.response.status = 'success'
+        res.data.response.message = message
+        return res.data
+    }
+    res.setSuccessMessage = (message = "Success!") => {
+        res.data.response.status = 'success'
+        res.data.response.message = message
+        return res
+    }
+    res.setErrorMessage = (errorCode, message = "Failed!") => {
+        res.data.response.status = 'failed'
+        res.data.response.error = errorCode
+        res.data.response.message = message
+        return data
+    }
+    next()
+}
