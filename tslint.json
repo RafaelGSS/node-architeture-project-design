@@ -3,9 +3,14 @@
     "extends": [
         "tslint:recommended"
     ],
-    "jsRules": {},
+    "jsRules": {
+        "object-literal-sort-keys": false
+    },
     "rules": {
-        "trailing-comma": [ false ]
+        "trailing-comma": [
+            false
+        ],
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }

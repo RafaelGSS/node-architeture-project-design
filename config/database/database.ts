@@ -1,3 +1,3 @@
-interface DBConnection {
-
+interface IDBConnection {
+    connect(): any;
 }
