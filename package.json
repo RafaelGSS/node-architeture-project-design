@@ -23,7 +23,7 @@
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node src/app.ts",
+    "start": "node dist/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node bin/npm-postinstall.js"
   },
