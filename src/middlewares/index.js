@@ -18,13 +18,13 @@ module.exports = (req, res, next) => {
     res.setSuccessMessage = (message = "Success!") => {
         res.data.response.status = "success";
         res.data.response.message = message;
-        return res;
+        return res.data;
     };
     res.setErrorMessage = (errorCode, message = "Failed!") => {
         res.data.response.status = "failed";
         res.data.response.error = errorCode;
         res.data.response.message = message;
-        return data;
+        return res.data;
     };
     next();
 };
