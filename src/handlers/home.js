@@ -1,7 +1,7 @@
-const controller = {
+const handler = {
     home: (req, res) => {
         return res.json(res.setData({ ok: true }));
     },
 };
 
-module.exports = controller;
+module.exports = handler;

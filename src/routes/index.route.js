@@ -1,5 +1,5 @@
-const controller = require("../controllers/home");
+const handler = require("../handlers/home");
 
 module.exports = (app) => {
-    app.get("/", controller.home);
+    app.get("/", handler.home);
 };
