@@ -1,12 +1,27 @@
 export class DBModel {
 
-    public driver: string;
-    public port: number;
-    public host: string;
-    public database: string;
-    public user: string;
-    public password: string;
+    driver: string;
+    port: number;
+    host: string;
+    database: string;
+    user: string;
+    password: string;
 
+    constructor(
+        driver: string,
+        host: string,
+        database: string,
+        user: string,
+        password: string,
+        port: number
+    ){
+        this.driver = driver;
+        this.host = host;
+        this.database = database,
+        this.user = user;
+        this.password = password;
+        this.port = port
+    }
     /**
      * DBUri returns driver://user:password@host:port/database
      */
