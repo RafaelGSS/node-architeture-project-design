@@ -1,7 +1,10 @@
+import { config } from "dotenv";
 import express from "express";
 import path from "path";
 import registerRoutes from "../config/routes";
 import builderResponseMiddleware from "./middlewares";
+
+config();
 
 const app = express();
 
