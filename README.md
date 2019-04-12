@@ -81,8 +81,8 @@ MIT
 
 ## CONTRIBUITING
 
-Please read **CONTRIBUITING.md**
+Please read [CONTRIBUITING.md](CONTRIBUITING.md)
 
 ## TODO
 
-Please read **TODO.md**
+Please read [TODO](TODO.md)
