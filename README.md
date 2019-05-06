@@ -1,6 +1,11 @@
 # NodeJS API Structure
 The project structure for helping new api using any http server ( Using express for these boilerplate ) 
 
+## Install from CLI
+
+[HERE](https://github.com/RafaelGSS/napd)
+
+
 ## Structure
 
 ```
